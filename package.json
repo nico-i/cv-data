@@ -2,10 +2,12 @@
   "version": "1.0.1",
   "name": "@nico-i/cv-data",
   "type": "module",
+  "main": "out/index.js",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
+    "build": "bun build . --outdir ./out",
     "gen:gql": "bunx graphql-codegen",
     "gen:gql:watch": "bunx graphql-codegen --watch",
     "o:gql": "dotenvx run -- npx opn-cli $STRAPI_URL/graphql",

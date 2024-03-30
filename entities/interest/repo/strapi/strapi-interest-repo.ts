@@ -1,9 +1,6 @@
 import { InvalidLocalizedEntityError } from "entities/entity";
 import { Interest } from "entities/interest";
-import {
-  InvalidInterestError,
-  type InterestRepo,
-} from "entities/interest/repo/interest-repo";
+import { type InterestRepo } from "entities/interest/repo/interest-repo";
 import type { StrapiClient } from "infrastructure/interfaces/strapi";
 import { Locale } from "value-objects/locale";
 
@@ -14,18 +11,10 @@ export class StrapiInterestRepo implements InterestRepo {
     const res = await this.strapiClient.sdk.GetInterests({
       locale: locale.value,
     });
-
-    if (!res.interests?.data) {
-      return [];
-    }
-
-    return res.interests.data.map((resInterest) => {
-      if (!resInterest.id) {
-        throw new InvalidInterestError("Interest ID is missing");
-      }
-
-      if (!resInterest.attributes) {
-        throw new InvalidInterestError("Interest attributes are missing");
+    const interests: Interest[] = [];
+    for (const resInterest of res.interests?.data || []) {
+      if (!resInterest?.id || !resInterest?.attributes) {
+        continue;
       }
 
       const { locale, name } = resInterest.attributes;
@@ -34,7 +23,8 @@ export class StrapiInterestRepo implements InterestRepo {
         throw new InvalidLocalizedEntityError();
       }
 
-      return new Interest(resInterest.id, new Locale(locale), name);
-    });
+      interests.push(new Interest(resInterest.id, new Locale(locale), name));
+    }
+    return interests;
   }
 }

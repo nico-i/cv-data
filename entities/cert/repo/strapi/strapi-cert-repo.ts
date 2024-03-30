@@ -52,6 +52,6 @@ export class StrapiCertRepo implements CertRepo {
         )
       );
     }
-    return [];
+    return certs;
   }
 }

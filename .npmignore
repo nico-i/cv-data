@@ -1,2 +1,11 @@
 codegen.ts
 *.env
+infrastructure
+value-objects
+entities
+.github
+.git
+index.ts
+tsconfig.json
+renovate.json
+bun.lockb

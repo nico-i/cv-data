@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/nico-i/cv-data/compare/v1.2.0...v1.3.0) (2024-03-30)
+
+
+### Features
+
+* added type gen ([5eb6ef3](https://github.com/nico-i/cv-data/commit/5eb6ef33dac2ade7459ede6f523d0ea97fcd2ab8))
+
 ## [1.2.0](https://github.com/nico-i/cv-data/compare/v1.1.1...v1.2.0) (2024-03-30)
 
 

@@ -1,7 +1,10 @@
 {
-  "version": "1.0.0",
+  "version": "0.0.0",
   "name": "@nico-i/cv-data",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "gen:gql": "bunx graphql-codegen",
     "gen:gql:watch": "bunx graphql-codegen --watch",

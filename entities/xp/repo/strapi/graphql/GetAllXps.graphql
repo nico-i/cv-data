@@ -1,0 +1,16 @@
+query GetAllXps($locale: I18NLocaleCode!) {
+  xps(locale: $locale) {
+    data {
+      id
+      attributes {
+        locale
+        position
+        company
+        info
+        start
+        end
+        url
+      }
+    }
+  }
+}

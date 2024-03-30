@@ -1,0 +1,24 @@
+{
+  "name": "@nico-i/cv-data",
+  "type": "module",
+  "scripts": {
+    "gen:gql": "bunx graphql-codegen",
+    "gen:gql:watch": "bunx graphql-codegen --watch",
+    "o:gql": "dotenvx run -- npx opn-cli $STRAPI_URL/graphql",
+    "o:cms": "dotenvx run -- npx opn-cli $STRAPI_URL/admin"
+  },
+  "devDependencies": {
+    "@dotenvx/dotenvx": "^0.27.1",
+    "@graphql-codegen/cli": "^5.0.2",
+    "@graphql-codegen/typescript": "^4.0.6",
+    "@graphql-codegen/typescript-generic-sdk": "^4.0.1",
+    "@graphql-codegen/typescript-operations": "^4.2.0",
+    "@parcel/watcher": "^2.4.1",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1"
+  }
+}

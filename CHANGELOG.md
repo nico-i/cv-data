@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/nico-i/cv-data/compare/v1.0.1...v1.1.0) (2024-03-30)
+
+
+### Features
+
+* added build step ([bc7e435](https://github.com/nico-i/cv-data/commit/bc7e43527998a7a9dab6be443b4a50f8054d337b))
+
 ## [1.0.1](https://github.com/nico-i/cv-data/compare/v1.0.0...v1.0.1) (2024-03-30)
 
 

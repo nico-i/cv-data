@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/nico-i/cv-data/compare/v1.1.1...v1.2.0) (2024-03-30)
+
+
+### Features
+
+* updated indexes and build output ([0d18d30](https://github.com/nico-i/cv-data/commit/0d18d30ccbb9175afdd2ce9c84d47b7b0ce7e8f4))
+
 ## [1.1.1](https://github.com/nico-i/cv-data/compare/v1.1.0...v1.1.1) (2024-03-30)
 
 

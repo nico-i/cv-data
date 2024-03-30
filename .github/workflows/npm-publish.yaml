@@ -1,0 +1,15 @@
+name: Node.js Package
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+      - run: bun publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}

@@ -1,4 +1,5 @@
 {
+  "version": "1.0.0",
   "name": "@nico-i/cv-data",
   "type": "module",
   "scripts": {

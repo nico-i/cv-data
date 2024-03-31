@@ -39,7 +39,7 @@ export class StrapiClient {
             Authorization: `bearer ${this.strapiApiToken}`,
           },
           body: JSON.stringify({
-            query: doc,
+            query: doc.loc?.source.body,
             variables,
           }),
         });

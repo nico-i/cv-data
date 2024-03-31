@@ -2,6 +2,8 @@
   "version": "1.3.0",
   "name": "@nico-i/cv-data",
   "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
@@ -12,8 +14,6 @@
     "o:gql": "dotenvx run -- npx opn-cli $STRAPI_URL/graphql",
     "o:cms": "dotenvx run -- npx opn-cli $STRAPI_URL/admin"
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "files": [
     "/dist"
   ],

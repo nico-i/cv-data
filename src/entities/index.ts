@@ -1,9 +1,9 @@
-export * as cert from "./cert";
-export * as ed from "./ed";
-export * as info from "./info";
-export * as interest from "./interest";
-export * as lang from "./lang";
-export * as project from "./project";
-export * as skill from "./skill";
-export * as volunteer from "./volunteer";
-export * as xp from "./xp";
+export * from "./cert";
+export * from "./ed";
+export * from "./info";
+export * from "./interest";
+export * from "./lang";
+export * from "./project";
+export * from "./skill";
+export * from "./volunteer";
+export * from "./xp";

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/nico-i/cv-data/compare/v1.7.0...v1.8.0) (2024-03-31)
+
+
+### Features
+
+* lang document is now optional + consistent field namings ([b2702d5](https://github.com/nico-i/cv-data/commit/b2702d58905d0d91e0f95066f6760cd72fa2ad4d))
+
 ## [1.7.0](https://github.com/nico-i/cv-data/compare/v1.6.0...v1.7.0) (2024-03-31)
 
 

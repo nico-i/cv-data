@@ -8,7 +8,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "bunx tsc",
+    "build": "bunx tsc && bunx resolve-tspaths",
     "gen:gql": "bunx graphql-codegen",
     "gen:gql:watch": "bunx graphql-codegen --watch",
     "o:gql": "dotenvx run -- npx opn-cli $STRAPI_URL/graphql",
@@ -24,7 +24,8 @@
     "@graphql-codegen/typescript-generic-sdk": "^4.0.1",
     "@graphql-codegen/typescript-operations": "^4.2.0",
     "@parcel/watcher": "^2.4.1",
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "resolve-tspaths": "^0.8.18"
   },
   "peerDependencies": {
     "typescript": "^5.0.0",

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/nico-i/cv-data/compare/v1.4.0...v1.4.1) (2024-03-31)
+
+
+### Bug Fixes
+
+* index.ts location ([09aa976](https://github.com/nico-i/cv-data/commit/09aa976a7416fdf1940079d6a3fd6fc78ff30386))
+
 ## [1.4.0](https://github.com/nico-i/cv-data/compare/v1.3.0...v1.4.0) (2024-03-31)
 
 

@@ -62,7 +62,7 @@ export class StrapiInfoRepo implements InfoRepo {
     return new Info(
       res.info.data.id,
       new Locale(infoLocale),
-      new Image(new URL(url), alternativeText, width, height),
+      new Image(new URL(url), width, height, alternativeText),
       address,
       occupation,
       name,

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/nico-i/cv-data/compare/v1.5.0...v1.5.1) (2024-03-31)
+
+
+### Bug Fixes
+
+* used query body instead of node object ([e8d0112](https://github.com/nico-i/cv-data/commit/e8d011206879c5d25ef020e1c0e63cc394e1197d))
+
 ## [1.5.0](https://github.com/nico-i/cv-data/compare/v1.4.1...v1.5.0) (2024-03-31)
 
 

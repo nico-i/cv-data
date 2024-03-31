@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/nico-i/cv-data/compare/v1.9.0...v1.10.0) (2024-03-31)
+
+
+### Features
+
+* better image error handling ([c213861](https://github.com/nico-i/cv-data/commit/c213861ffc9ef31b576605e7313f3fa75c2374a0))
+
 ## [1.9.0](https://github.com/nico-i/cv-data/compare/v1.8.0...v1.9.0) (2024-03-31)
 
 

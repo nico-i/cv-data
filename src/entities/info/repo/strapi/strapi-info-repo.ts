@@ -52,9 +52,9 @@ export class StrapiInfoRepo implements InfoRepo {
         const { url, icon, text } = resCLink;
         const iconUrl = icon?.data?.attributes?.url;
         if (iconUrl) {
-          contactLinks.push(new Link(new URL(url), new Svg(new URL(iconUrl))));
-        } else {
-          contactLinks.push(new Link(new URL(url), text));
+          contactLinks.push(
+            new Link(new URL(url), text, new Svg(new URL(iconUrl)))
+          );
         }
       }
     }

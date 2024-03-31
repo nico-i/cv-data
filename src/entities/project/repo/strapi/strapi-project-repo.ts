@@ -72,6 +72,7 @@ export class StrapiProjectRepo implements ProjectRepo {
             projectLinks.push(
               new Link(
                 new URL(url),
+                text,
                 new Svg(new URL(icon.data?.attributes?.url))
               )
             );

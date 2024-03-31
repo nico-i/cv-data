@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/nico-i/cv-data/compare/v1.6.0...v1.7.0) (2024-03-31)
+
+
+### Features
+
+* `Link` can now contain an icon AND text ([f3cafb1](https://github.com/nico-i/cv-data/commit/f3cafb1148b12eb10d514db7064baf13ae6dee8f))
+
 ## [1.6.0](https://github.com/nico-i/cv-data/compare/v1.5.1...v1.6.0) (2024-03-31)
 
 

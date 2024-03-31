@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [1.10.1](https://github.com/nico-i/cv-data/compare/v1.10.0...v1.10.1) (2024-03-31)
+
+
+### Bug Fixes
+
+* invalid constructor ([077479a](https://github.com/nico-i/cv-data/commit/077479a0b852e2f7c976d00e5aacd5f9b256e123))
+
 ## [1.9.0](https://github.com/nico-i/cv-data/compare/v1.8.0...v1.9.0) (2024-03-31)
 
 

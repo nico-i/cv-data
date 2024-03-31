@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/nico-i/cv-data/compare/v1.5.1...v1.6.0) (2024-03-31)
+
+
+### Features
+
+* improved exports ([1b56405](https://github.com/nico-i/cv-data/commit/1b5640544a0deb5941be0f2879de7cae2f28f89a))
+
 ## [1.5.1](https://github.com/nico-i/cv-data/compare/v1.5.0...v1.5.1) (2024-03-31)
 
 

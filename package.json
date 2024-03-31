@@ -1,5 +1,5 @@
 {
-  "version": "1.5.1",
+  "version": "1.6.0",
   "name": "@nico-i/cv-data",
   "type": "module",
   "main": "dist/index.js",

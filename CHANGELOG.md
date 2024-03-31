@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.4.0](https://github.com/nico-i/cv-data/compare/v1.3.0...v1.4.0) (2024-03-31)
+
+
+### Features
+
+* add `declaration` gen ([707631d](https://github.com/nico-i/cv-data/commit/707631da2ec2408056999b8a99d563bb23198c11))
+* moved files to src folder + began improving compilation ([ec5d4f2](https://github.com/nico-i/cv-data/commit/ec5d4f27ee28946e66e296616424ee3a56330ad0))
+
+
+### Bug Fixes
+
+* compilations by removing `noEmit` flag ([7dde0ff](https://github.com/nico-i/cv-data/commit/7dde0ff95b5c6dd5a4ff51d9ed9b02389f9d0e85))
+
 ## [1.3.0](https://github.com/nico-i/cv-data/compare/v1.2.0...v1.3.0) (2024-03-30)
 
 

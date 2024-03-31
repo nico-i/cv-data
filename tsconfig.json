@@ -19,6 +19,13 @@
     "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true,
 
-    "baseUrl": "."
-  }
+    /* Paths */
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    "outDir": "./dist"
+  },
+  "include": ["src/**/*"]
 }

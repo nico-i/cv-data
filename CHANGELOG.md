@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/nico-i/cv-data/compare/v1.8.0...v1.9.0) (2024-03-31)
+
+
+### Features
+
+* made docs optional ([e500893](https://github.com/nico-i/cv-data/commit/e50089357d995b6165f96e51f4663eecaab76820))
+
 ## [1.8.0](https://github.com/nico-i/cv-data/compare/v1.7.0...v1.8.0) (2024-03-31)
 
 

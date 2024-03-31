@@ -10,3 +10,9 @@ export class InvalidProjectLinkIconError extends Error {
     super(`Invalid project link icon: ${e}`);
   }
 }
+
+export class InvalidHeaderImageError extends Error {
+  constructor(e: unknown) {
+    super(`Invalid header image: ${e}`);
+  }
+}

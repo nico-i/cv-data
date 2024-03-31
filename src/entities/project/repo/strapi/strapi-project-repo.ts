@@ -1,6 +1,7 @@
 import { InvalidLocalizedEntityError } from "@/entities/entity";
 import { Project } from "@/entities/project";
 import {
+  InvalidHeaderImageError,
   InvalidProjectLinkIconError,
   type ProjectRepo,
 } from "@/entities/project/repo/project-repo";
@@ -50,10 +51,22 @@ export class StrapiProjectRepo implements ProjectRepo {
       if (header_image?.data?.attributes) {
         const { width, height, url, alternativeText } =
           header_image.data.attributes;
-        if (!width || !height || !url || !alternativeText)
-          throw new Error("Invalid header image data");
+        if (!width) {
+          throw new InvalidHeaderImageError("Width is missing");
+        }
+        if (!height) {
+          throw new InvalidHeaderImageError("Height is missing");
+        }
+        if (!url) {
+          throw new InvalidHeaderImageError("URL is missing");
+        }
 
-        headerImage = new Image(new URL(url), alternativeText, width, height);
+        headerImage = new Image(
+          new URL(url),
+          width,
+          height,
+          alternativeText || undefined
+        );
       }
 
       const projectLinks: Link[] = [];

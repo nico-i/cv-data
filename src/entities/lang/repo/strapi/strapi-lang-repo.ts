@@ -1,7 +1,6 @@
 import { InvalidLocalizedEntityError } from "@/entities/entity";
 import { Lang } from "@/entities/lang";
 import {
-  InvalidLangDocError,
   InvalidLangIconError,
   type LangRepo,
 } from "@/entities/lang/repo/lang-repo";
@@ -35,16 +34,17 @@ export class StrapiLangRepo implements LangRepo {
       }
       langIcon = new Svg(new URL(icon.data.attributes.url));
 
-      let langDoc: Doc | undefined = undefined;
-      if (resLang.attributes.doc) {
-        if (!resLang.attributes.doc.data?.attributes?.url) {
-          throw new InvalidLangDocError("url not found in doc data attributes");
-        }
-        langDoc = new Doc(new URL(resLang.attributes.doc.data.attributes.url));
-      }
-
       langs.push(
-        new Lang(resLang.id, new Locale(locale), name, langIcon, level, langDoc)
+        new Lang(
+          resLang.id,
+          new Locale(locale),
+          name,
+          langIcon,
+          level,
+          resLang.attributes.doc?.data?.attributes?.url
+            ? new Doc(new URL(resLang.attributes.doc.data.attributes.url))
+            : undefined
+        )
       );
     }
 

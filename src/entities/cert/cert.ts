@@ -12,7 +12,7 @@ export class Cert extends LocalizedEntity {
     locale: Locale,
     public readonly issuer: string,
     received: string | Date,
-    public readonly infoMdStr: Markdown,
+    public readonly mdInfo: Markdown,
     public readonly doc?: Doc,
     public readonly url?: InstanceType<typeof URL>
   ) {

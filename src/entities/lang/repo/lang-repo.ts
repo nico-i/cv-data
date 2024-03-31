@@ -10,9 +10,3 @@ export class InvalidLangIconError extends Error {
     super(`Invalid Lang Icon: ${e}`);
   }
 }
-
-export class InvalidLangDocError extends Error {
-  constructor(e: unknown) {
-    super(`Invalid Lang Doc: ${e}`);
-  }
-}

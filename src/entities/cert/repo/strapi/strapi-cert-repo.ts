@@ -1,11 +1,8 @@
 import { Cert } from "@/entities/cert";
-import {
-  InvalidCertDocError,
-  type CertRepo,
-} from "@/entities/cert/repo/cert-repo";
+import { type CertRepo } from "@/entities/cert/repo/cert-repo";
 import { InvalidLocalizedEntityError } from "@/entities/entity";
 import type { StrapiClient } from "@/infrastructure/interfaces/strapi";
-import { Doc } from "@/value-objects/doc";
+import { Doc } from "@/value-objects";
 import { Locale } from "@/value-objects/locale";
 import { Markdown } from "@/value-objects/markdown/markdown";
 
@@ -28,16 +25,6 @@ export class StrapiCertRepo implements CertRepo {
       if (!locale) {
         throw new InvalidLocalizedEntityError();
       }
-      let certDoc: Doc | undefined;
-
-      if (doc) {
-        if (!doc.data?.attributes?.url) {
-          throw new InvalidCertDocError();
-        }
-        certDoc = new Doc(new URL(doc.data.attributes.url));
-      } else {
-        certDoc = undefined;
-      }
 
       certs.push(
         new Cert(
@@ -47,7 +34,9 @@ export class StrapiCertRepo implements CertRepo {
           issuer,
           received,
           new Markdown(info),
-          certDoc,
+          resCert.attributes.doc?.data?.attributes?.url
+            ? new Doc(new URL(resCert.attributes.doc.data.attributes.url))
+            : undefined,
           url ? new URL(url) : undefined
         )
       );

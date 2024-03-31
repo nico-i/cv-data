@@ -1,5 +1,5 @@
 import { Ed } from "@/entities/ed";
-import { InvalidEdDocError, type EdRepo } from "@/entities/ed/repo";
+import { type EdRepo } from "@/entities/ed/repo";
 import { InvalidLocalizedEntityError } from "@/entities/entity";
 import type { StrapiClient } from "@/infrastructure/interfaces/strapi";
 import { Doc } from "@/value-objects/doc/doc";
@@ -25,14 +25,6 @@ export class StrapiEdRepo implements EdRepo {
         throw new InvalidLocalizedEntityError();
       }
 
-      let edDoc: Doc | undefined = undefined;
-      if (doc) {
-        if (!doc.data?.attributes?.url) {
-          throw new InvalidEdDocError("url not found in doc data attributes");
-        }
-        edDoc = new Doc(new URL(doc.data.attributes.url));
-      }
-
       eds.push(
         new Ed(
           resEd.id,
@@ -42,7 +34,9 @@ export class StrapiEdRepo implements EdRepo {
           start,
           grade,
           url ? new URL(url) : undefined,
-          edDoc,
+          resEd.attributes.doc?.data?.attributes?.url
+            ? new Doc(new URL(resEd.attributes.doc.data.attributes.url))
+            : undefined,
           end
         )
       );

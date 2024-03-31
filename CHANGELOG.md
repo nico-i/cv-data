@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/nico-i/cv-data/compare/v1.4.1...v1.5.0) (2024-03-31)
+
+
+### Features
+
+* added `resolve-tspaths` dep ([d91f1de](https://github.com/nico-i/cv-data/commit/d91f1de32f2afa410e452655ad6ebff2a2ec27d5))
+
 ## [1.4.1](https://github.com/nico-i/cv-data/compare/v1.4.0...v1.4.1) (2024-03-31)
 
 
